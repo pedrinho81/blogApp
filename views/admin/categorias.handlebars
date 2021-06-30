@@ -1,0 +1,25 @@
+<h2>Lista de categorias:</h2>
+
+{{#each categorias}}
+<div class="accordion mt-4" id="accordionExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        <h4>{{nome}} </h4>
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <h5>Slug: {{slug}}</h5>
+        <h6>Data de criação: {{date}}</h6>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  
+  {{else}}
+{{/each}}
+<a href="/admin/categorias/add"   
+<button class="btn btn-success mt-4">Nova categoria</button>
+</a>
