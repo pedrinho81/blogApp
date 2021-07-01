@@ -128,13 +128,8 @@ router.post("/categorias/edit", (req, res) => {
       })  
 
         
-       
-    
-    
-
-
-router.get("/posts", (req, res) => {
-    res.send("Página de posts")
+router.get("/postagens", (req, res) => {
+res.send("Página de posts")
 })
 
 
