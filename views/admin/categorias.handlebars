@@ -4,7 +4,9 @@
  {{else}}
     
  {{/each}}
-
+<a href="/admin/categorias/add"   
+<button class="btn btn-success mt-4">Nova categoria</button>
+</a>
 {{#each categorias}}
 <div class="accordion mt-4" id="accordionExample">
   <div class="accordion-item">
@@ -19,6 +21,11 @@
         <h6>Data de criação: {{date}}</h6>    
         <hr>
         <a href="/admin/categorias/edit/{{_id}}"> <button class="btn btn-success">Editar categoria</button> </a>
+        <form action="/admin/categorias/delete" method="post">
+          <input type="hidden" name= "idDelete" value="{{_id}}">
+         <button type="submit" class="btn btn-danger mt-2">Deletar categoria</button>
+
+        </form>
       </div>
     </div>
   </div>
@@ -26,7 +33,6 @@
 
   
   {{else}}
+  <h4 class="mt-4 alert alert-warning">Nenhuma categoria registrada! </h4>
+ 
 {{/each}}
-<a href="/admin/categorias/add"   
-<button class="btn btn-success mt-4">Nova categoria</button>
-</a>
