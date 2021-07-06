@@ -1,0 +1,40 @@
+<h2>Hello, world!</h2>
+<div class="bg-light p-5 rounded-lg m-3">
+  <h1 class="display-4">Blog do NodeJS</h1>
+  <p class="lead">Este simples blog foi criado com NodeJS, navegue e divirta-se.</p>
+  <hr class="my-4">
+  <p>Tecnologias usadas:</p>
+  <a class="btn btn-primary btn-lg" href="#" role="button">Crie uma conta</a>
+</div>
+<hr>
+<h2> Postagens recentes </h2>
+
+<div class="row row-cols-1 row-cols-md-2 g-4">
+{{#each postagens}}
+  
+
+
+  <div class="col mt-md-5 ">
+    <div class="card text-dark border-success bg-light mb-3" style="">
+      <div class="card-header" style="font-weight: bold; font-size:x-large " >{{titulo}}</div>
+      <div class="card-body">
+        <p class="">{{descricao}}</p>
+        <a href="/postagem/{{slug}}"><button class="btn btn-success">Leia mais</button></a>
+        
+        <hr>
+        <small>Categoria: {{categoria.nome}}</small> <br>
+        <small>Data de criação: {{data}}</small>
+
+      </div>
+    </div>
+  </div>
+
+  
+
+
+{{else}}
+  <h4 class="mt-4 alert alert-warning">Nenhuma postagem recente. </h4>
+ 
+{{/each}}
+<hr class="col">
+</div>

@@ -17,13 +17,14 @@
             <small>Data: {{data}}</small><br>
             <small>Categoria: {{categoria.nome}}</small>
             <br>
-            <a href="/admin/postagens/edit/{{_id}}"> <button class="btn btn-success mt-2">Editar categoria</button> </a>
+            <a href="/admin/postagens/edit/{{_id}}"> <button class="btn btn-success mt-2">Editar postagem</button> </a>
             <form action="/admin/postagens/delete" method="post">
-                <button class="btn btn-danger mt-2" name="id" value="{{_id}}" type="submit">Deletar categoria</button>
+                <button class="btn btn-danger mt-2" name="id" value="{{_id}}" type="submit">Deletar postagem</button>
             </form>
         </div>
         
     </div>
 {{else}}
-    <p>Nenhuma postagem registrada!</p> 
+      <h4 class="mt-4 alert alert-warning">Nenhuma postagem registrada! </h4>
+
 {{/each}}

@@ -131,7 +131,7 @@ router.post("/categorias/edit", (req, res) => {
 
         
 router.get("/postagens", function(req, res) {
-    Postagem.find().lean().populate("categoria").sort({ data: "desc" }).then(function(postagens) {
+    Postagem.find().lean().populate("categoria").sort({ data: "desc" }).then((postagens) =>{
          
      res.render("admin/postagens", { postagens: postagens });
           })
@@ -262,20 +262,7 @@ router.post("/postagens/delete", (req, res) => {
 
        
 
-        // if(erros.length > 0) {
-        //     req.flash("error_msg", "Houve um erro ao editar a categoria, Verifique novamente os campos")
-            
-        //     res.redirect("/admin/categorias")
-        // } else {
-        //     categoria.save().then(() => {
-        //         req.flash("success_msg", "Categoria alterada com sucesso!")
-        //         res.redirect("/admin/categorias")
-        //     }).catch((err) => {
-        //     req.flash("error_msg", "Ops! houve um erro interno ao editar a categoria, tente novamente!")
-        //     res.redirect("/admin/categorias")})
-        // }
-        
-        // })
+
       
 
 
