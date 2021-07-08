@@ -12,7 +12,7 @@ require("./models/Postagem")
 Postagem = mongoose.model("postagens")
 require("./models/Categorias")
 Categoria = mongoose.model("categorias")
-
+const usuario = require("./routes/usuario")
 //CONFIFURAÇÕES
     //session
     app.use(session({
@@ -98,7 +98,12 @@ Categoria = mongoose.model("categorias")
     app.get("/404",(req, res) => {
         res.send("ERRO 404!")
     })
+  
     app.use("/admin", admin)
+
+    app.use("/usuario", usuario)
+
+    
     //Public 
     app.use(express.static(path.join(__dirname, "public")))    
     //OUTROS
