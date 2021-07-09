@@ -53,7 +53,8 @@ router.post("/registro", (req, res) => {
                                 req.flash("success_msg", "Usuário cadastrado com sucesso!")
                                 res.redirect("/")
                             }).catch((err) => {
-                                req.flash("error_msg", "Houve um erro intero.")
+                                req.flash("error_msg", "Houve um erro interno.")
+                                res.redirect("/")
                             })
                         }
                     })
@@ -70,4 +71,7 @@ router.post("/registro", (req, res) => {
     }
 })
 
+router.get("/login", (req, res) => {
+    res.render("usuario/login")
+})
 module.exports = router
